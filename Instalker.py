@@ -35,7 +35,7 @@ import os
 display = Display(visible=0, size=(1920, 1920))
 display.start()
 
-driver = webdriver.Chrome()
+driver = webdriver.Firefox()
 driver.implicitly_wait(30)
 driver.get('https://www.instagram.com/')
 print "Connecting to Instagram....."
