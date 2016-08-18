@@ -24,13 +24,13 @@ import time
 import sys
 import os
 
-print "Installing Requirements"
+#print "Installing Requirements"
 
-print "Provide your Super User Password if asked for"
+#print "Provide your Super User Password if asked for"
 
-os.system("sudo pip install selenium")
-os.system("sudo pip install pyvirtualdisplay")
-os.system("sudo apt-get install xvfb xserver-xephyr")
+#os.system("sudo pip install selenium")
+#os.system("sudo pip install pyvirtualdisplay")
+#os.system("sudo apt-get install xvfb xserver-xephyr")
 
 display = Display(visible=0, size=(1920, 1920))
 display.start()
