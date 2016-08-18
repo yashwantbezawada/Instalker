@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""InstaCrawler.py: Download all the images of the Instagramers who are followed by user."""
+"""Instalker.py: Download all the images of the Instagramers who are followed by user."""
 
 __author__		=	"Yashwant Bezawada"
 __version__		=	"1.4"
