@@ -35,7 +35,7 @@ import os
 display = Display(visible=0, size=(1920, 1920))
 display.start()
 
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 driver.implicitly_wait(30)
 driver.get('https://www.instagram.com/')
 print "Connecting to Instagram....."
@@ -50,7 +50,12 @@ inputPass = driver.find_element_by_xpath("/html/body/span[@id='react-root']/sect
 inputPass.send_keys(pswd)
 inputPass.submit()
 print "Logging in ........"
-driver.find_element_by_css_selector("a[href*='/yashwant_b/']").click()
+try:
+	driver.find_element_by_css_selector("a[href*='/yashwant_b/']").click()
+except Exception:
+	print "Invalid Username/Password"
+	print "Exiting....."
+	exit()
 num_fol = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/article/header/div[2]/ul/li[3]/a/span').text
 num_fol = int(num_fol)
 
