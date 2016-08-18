@@ -4,9 +4,9 @@
 
 __author__		=	"Yashwant Bezawada"
 __version__		=	"1.4"
-__maintainer__	=	"Yashwant Bezawada"
-__email__			=	"yashwant_b@me.com"
-__status__			=	"Beta"
+__maintainer__		=	"Yashwant Bezawada"
+__email__		=	"yashwant_b@me.com"
+__status__		=	"Beta"
 
 
 from selenium import webdriver
@@ -75,7 +75,7 @@ while newSize > oldSize:
 	newSize = len(driver.find_elements_by_tag_name('li'))
 print "Scanned "+str(num_fol)+" members"
 ####################################################################################################################
-for i in range(43,num_fol+1):
+for i in range(1,num_fol+1):
 	usr_url = driver.find_element_by_xpath("/html/body/div[2]/div/div[2]/div/div[2]/ul/li["+str(i)+"]/div/div/div/div/a").get_attribute("href")
 	driver.implicitly_wait(20)
 	body = driver.find_element_by_tag_name("body")
