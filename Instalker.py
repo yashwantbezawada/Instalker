@@ -52,8 +52,8 @@ if __name__ == '__main__':
 	os.system("sudo pip install pyvirtualdisplay")
 	os.system("sudo apt-get install xvfb xserver-xephyr")
 	os.system("clear")
-	#display = Display(visible=0, size=(1920, 1920))
-	#display.start()
+	display = Display(visible=0, size=(1920, 1920))
+	display.start()
 
 	driver = webdriver.Firefox()
 	driver.implicitly_wait(30)
