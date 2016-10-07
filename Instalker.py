@@ -52,8 +52,8 @@ if __name__ == '__main__':
 	os.system("sudo pip install pyvirtualdisplay")
 	os.system("sudo apt-get install xvfb xserver-xephyr")
 	os.system("clear")
-	display = Display(visible=0, size=(1920, 1920))
-	display.start()
+	#display = Display(visible=0, size=(1920, 1920))
+	#display.start()
 
 	driver = webdriver.Firefox()
 	driver.implicitly_wait(30)
@@ -71,13 +71,13 @@ if __name__ == '__main__':
 	inputPass.send_keys(pswd)
 	inputPass.submit()
 	print "Logging in ........"
-	driver.find_element_by_css_selector("a[href*='/yashwant_b/']").click()
+	driver.find_element_by_css_selector("a[href*='/"+usrid+"/']").click()
 	num_fol = driver.find_element_by_xpath('//*[@id="react-root"]/section/main/article/header/div[2]/ul/li[3]/a/span').text
 	num_fol = int(num_fol)
 
 	print "You are following "+ str(num_fol)+" members"
 
-	driver.find_element_by_css_selector("a[href*='/yashwant_b/following/']").click()
+	driver.find_element_by_css_selector("a[href*='/"+usrid+"/following/']").click()
 
 	oldSize = 0
 	newSize = 0
